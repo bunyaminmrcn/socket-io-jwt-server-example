@@ -5,7 +5,7 @@ var conn = amqp.connect("amqp://guest:guest@" + RABBITMQ);
 
 const up = async () => {
     conn.then(function (conn) {
-        console.log("channel createdd")
+        console.log("channel created")
         return conn.createChannel().then(function (ch) {
           var q = "sms";
           ch.assertExchange("app", "direct");
