@@ -3,7 +3,7 @@ const router = express.Router();
 const jwt = require("jsonwebtoken");
 const { Account } = require('../models');
 const { Op } = require('sequelize');
-
+const { check_passpord } = require('../helpers')
 
 router.route('/login').post(async function (req, res, next) {
     let { id_, password, fetch } = req.body;
